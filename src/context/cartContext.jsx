@@ -12,19 +12,25 @@ export const CartProvider = ({ children }) => {
     //Add to cart
     const addTocart = (product) => {
         setCartItems((prevCart) => {
-            // check if item is already in cart
+            console.log("Previous Cart:", prevCart);
             const existingItem = prevCart.find((item) => item.id === product.id);
+
+            let updatedCart;
             if (existingItem) {
-                return prevCart.map((item) => {
-                    item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-                })
+                updatedCart = prevCart.map((item) =>
+                    item.id === product.id
+                        ? { ...item, quantity: item.quantity + 1 }
+                        : item
+                );
+            } else {
+                updatedCart = [...prevCart, { ...product, quantity: 1 }];
             }
-            else {
-                return [...prevCart, { ...product, quantity: 1 }]
-            }
-        }
-        )
-    }
+
+            console.log("Updated Cart:", updatedCart);
+            return updatedCart;
+        });
+    };
+
 
     //Remove from cart
 
