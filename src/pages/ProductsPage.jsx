@@ -24,6 +24,7 @@ const ProductsPage = () => {
       setLoading(false)
     }
   }
+  console.log(products)
 
   useEffect(() => {
     fetchProducts()
