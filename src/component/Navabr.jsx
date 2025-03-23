@@ -19,6 +19,7 @@ const Navabr = () => {
                     <li className='text-md hover:text-pink-400 transition-colors font-bold '><Link to="/">About Us</Link></li>
                     <li className='text-md hover:text-pink-400 transition-colors font-bold '><Link to="/products">Products</Link></li>
                     <li className='text-md hover:text-pink-400 transition-colors font-bold '><Link to="/">Contact Us</Link></li>
+                    <li className='text-md hover:text-pink-400 transition-colors font-bold '><Link to="/cart">Cart</Link></li>
                 </ul>
             </div>            {/* cart icon */}
             <div className="flex items-center space-x-4">
