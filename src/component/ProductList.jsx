@@ -12,6 +12,7 @@ const ProductList = ({ products }) => {
 
                     <button className='bg-pink-700 text-white px-4 py-2 rounded-md mt-2' onClick={() => addTocart(product)}>
                         Add to cart
+                        
                     </button>
                 </div>
             ))}
